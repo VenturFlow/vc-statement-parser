@@ -93,7 +93,7 @@ PDF ──► pdfplumber + pypdfium2 ──► raw text + per-page text
     DETERMINISTIC_EXTRACTORS                ← per-admin templates (the OSS flywheel)
             │   if no match
             ▼
-    extractors.llm.extract_with_llm()       ← instructor + Anthropic
+    extractors.llm.extract_with_llm()       ← instructor + OpenAI-compatible
             │
             ▼
     CapitalAccountStatement (Pydantic)      ← ILPA Reporting Template v2.0 vocabulary
@@ -133,7 +133,7 @@ The dispatch / extract / verify architecture generalises to capital call notices
 | Standish (LP-PCAP) | `STANDISH` | `deterministic.standish` | per-field |
 | Auditor-style fund-level "Statement of Changes in Partners' Capital" — KPMG, CohnReznick, Deloitte, EY, PwC layouts | `GAAP_SCPC` | `deterministic.gaap_scpc` | per-field |
 | Gen II, SS&C/Geneva, Citco, Apex, Alter Domus | dispatcher signatures wired; deterministic extractors not yet implemented | LLM fallback | n/a until extractor exists |
-| Anything else | dispatcher returns `UNKNOWN` | LLM fallback (with `[llm]` extra + `ANTHROPIC_API_KEY`) | per-field via `instructor` citations |
+| Anything else | dispatcher returns `UNKNOWN` | LLM fallback (with `[llm]` extra + `OPENAI_API_KEY` and optional `OPENAI_BASE_URL`) | per-field via `instructor` citations |
 
 The fund-level SCPC parser is an **aggregate** view (the "Limited Partners" column treated as one synthetic LP, `lp_name = "All Limited Partners (Aggregate)"`). It cannot give per-LP figures because the source document doesn't carry them — but it does give a verified roll-forward at the fund level.
 

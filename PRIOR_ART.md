@@ -89,7 +89,7 @@ No public machine-readable schema. All three are proprietary data subscriptions.
 
 ```
 pdfplumber + pypdfium2          → text/table/image extraction
-  → instructor + Anthropic       → Pydantic-typed extraction with retries
+  → instructor + OpenAI-compat   → Pydantic-typed extraction with retries
     → langextract-style citations → page/bbox grounding for every field
       → our verification layer    → arithmetic invariants (opening + calls
                                     − distributions + P&L = closing, etc.)

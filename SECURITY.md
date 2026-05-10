@@ -3,14 +3,10 @@
 ## Reporting a vulnerability
 
 **Do not file a public GitHub issue for a security report.** Send the
-details to **security@venturflow.com** with subject line `[SECURITY]
+details to **m.shaf@wustl.edu** with subject line `[SECURITY]
 vc-statement-parser: <short description>`. We will acknowledge within
 72 hours and aim to ship a patch — or a documented mitigation if the issue
 is in an upstream dependency — within 14 days.
-
-If you would like end-to-end encryption, our PGP key is published at
-[keybase.io/venturflow](https://keybase.io/venturflow) (TODO: replace with
-the project's actual key on first release).
 
 We will credit reporters in the release notes unless they prefer to remain
 anonymous. We do not run a paid bug-bounty program.

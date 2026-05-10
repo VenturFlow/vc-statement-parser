@@ -10,7 +10,7 @@ body:
           real PDF is needed to reproduce, redact it AND describe the
           structure in prose. See `CONTRIBUTING.md` → Privacy.
         - This is NOT a security issue. Security reports go to
-          security@venturflow.com (see `SECURITY.md`).
+          m.shaf@wustl.edu (see `SECURITY.md`).
 
   - type: input
     id: version
