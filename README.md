@@ -7,12 +7,6 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python: 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
 
-```text
-TODO: drop a 20-second asciinema / mp4 here showing
-        $ vc-statement-parse statement.pdf --validate
-      printing the JSON + a green "all invariants passed" report.
-```
-
 ## Why this exists
 
 Limited Partners receive quarterly statements as PDFs from a dozen different fund administrators, each with its own layout. Today the choice is (1) hire an analyst to retype them, (2) buy Canoe / Allvue / Arch (closed SaaS, $$$), or (3) build it yourself.
@@ -189,4 +183,4 @@ MIT — see [LICENSE](LICENSE).
 
 ---
 
-*Maintained by the [VenturFlow](https://venturflow.com) team.*
+*Maintained by the [VenturFlow](https://venturflow-marketing.vercel.app) team.*
