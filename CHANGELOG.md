@@ -7,6 +7,8 @@ and this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.ht
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-05-10
+
 ### Added
 - **GAAP Statement of Changes in Partners' Capital extractor** for KPMG /
   CohnReznick / Deloitte / EY / PwC illustrative templates and any GP-issued
