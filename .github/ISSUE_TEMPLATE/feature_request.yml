@@ -1,0 +1,37 @@
+name: Feature request
+description: Suggest a new capability that isn't a new administrator (use the dedicated template for that).
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem are you trying to solve?
+      description: Concrete user story is best — "as a [role], I want to [action], so that [outcome]".
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+      description: What would you like to see? API sketch, CLI flag, doc change.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Anything else you tried, or other tools you considered. Helps us understand the design space.
+
+  - type: dropdown
+    id: scope
+    attributes:
+      label: Roughly, where does this fit?
+      options:
+        - Core parser / verification
+        - CLI / batch processing
+        - LLM fallback / provider integration
+        - Documentation
+        - New document type (capital call notice, distribution notice, K-1, ...)
+        - Other

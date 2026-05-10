@@ -1,0 +1,56 @@
+name: New administrator support request
+description: Ask for support for a fund administrator we don't yet handle (Gen II, SS&C, Citco, Apex, Alter Domus, …).
+labels: [enhancement, "new-administrator"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for asking! Adding a new administrator is the highest-impact
+        contribution to this project. If you can submit a PR yourself, see
+        `CONTRIBUTING.md` → "Step-by-step: adding a new administrator".
+
+  - type: input
+    id: admin
+    attributes:
+      label: Administrator name
+      placeholder: "Gen II / SS&C Geneva / Citco / Apex / Alter Domus / ..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: layout
+    attributes:
+      label: Layout description
+      description: |
+        How does this administrator's PCAP statement look? List the labels
+        you see, the column structure, the date format, the currency
+        format, and any quirks (multi-line labels, parens-for-negatives,
+        em-dash zeros, etc.).
+
+        Bonus: paste the output of pdfplumber's text extraction on a
+        synthetic version of the layout.
+
+        DO NOT paste real LP data. Use synthetic numbers and a fake LP name
+        like "Acme University Endowment".
+      render: markdown
+    validations:
+      required: true
+
+  - type: textarea
+    id: synthetic
+    attributes:
+      label: Sample synthetic PDF / generator
+      description: |
+        Optional but very welcome — a short reportlab script that produces
+        a synthetic example of the layout. Look at
+        `examples/fixtures/generate.py` (Standish) or
+        `examples/fixtures/generate_gaap_scpc.py` (KPMG-style) for templates.
+      render: python
+
+  - type: textarea
+    id: priority
+    attributes:
+      label: How many statements does this affect?
+      description: |
+        Rough estimate. Helps us prioritise — admins serving many LPs jump
+        to the front of the queue.

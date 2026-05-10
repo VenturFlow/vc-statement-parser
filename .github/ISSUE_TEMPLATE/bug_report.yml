@@ -1,0 +1,83 @@
+name: Bug report
+description: Something doesn't work the way the docs say it should.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for filing a bug! Before submitting, please confirm:
+        - You are NOT attaching a real LP capital account statement. If a
+          real PDF is needed to reproduce, redact it AND describe the
+          structure in prose. See `CONTRIBUTING.md` → Privacy.
+        - This is NOT a security issue. Security reports go to
+          security@venturflow.com (see `SECURITY.md`).
+
+  - type: input
+    id: version
+    attributes:
+      label: vc-statement-parser version
+      description: Output of `pip show vc-statement-parser`. Or git SHA if from source.
+    validations:
+      required: true
+
+  - type: input
+    id: python
+    attributes:
+      label: Python version
+      description: Output of `python --version`.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: install
+    attributes:
+      label: Install path
+      options:
+        - "pip install vc-statement-parser"
+        - "pip install 'vc-statement-parser[llm]'"
+        - "pip install 'vc-statement-parser[fixtures]'"
+        - "uv sync --all-extras (from source)"
+        - other
+    validations:
+      required: true
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Include the exact CLI invocation or Python code, and the
+        full error / traceback.
+      render: shell
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+    validations:
+      required: true
+
+  - type: textarea
+    id: pdf
+    attributes:
+      label: Reproducing PDF
+      description: |
+        How do we reproduce the parse you're hitting? Options, in order of preference:
+        1. A synthetic PDF generator script (a la
+           `examples/fixtures/generate_gaap_scpc.py`) included inline below.
+        2. A pointer to a public document (URL + page number).
+        3. A prose description of the layout. Include 5-10 lines of the
+           extracted PDF text — run
+           `python -c "import pdfplumber; print(pdfplumber.open(YOURPDF).pages[N].extract_text())"`.
+        DO NOT attach a real LP statement.
+      render: text
+    validations:
+      required: true
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: Anything else?
+      description: Optional. Other context, related issues, screenshots of
+        the verification report, etc.

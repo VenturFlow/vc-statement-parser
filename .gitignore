@@ -1,0 +1,76 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg
+*.egg-info/
+build/
+dist/
+.eggs/
+develop-eggs/
+wheels/
+share/python-wheels/
+MANIFEST
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Tooling
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.dmypy.json
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+*.cover
+.tox/
+.nox/
+
+# IDE / OS / agent config
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+.claude/
+
+# Project
+*.log
+
+# Local-only secrets and credentials — NEVER commit any of these.
+# See SECURITY.md for the disclosure path if a key ever lands in history.
+.env
+.env.*
+!.env.example
+.envrc
+*.pem
+*.key
+secrets/
+credentials.json
+.aws/
+.gcloud/
+.openai-key
+.anthropic-key
+.groq-key
+
+# Never commit real LP statements — only synthetic fixtures and PUBLIC
+# illustrative documents (KPMG, CohnReznick, ILPA guidance). Defensive
+# naming-pattern guards below catch the common slips. See
+# examples/real_world/README.md for the full provenance rule.
+examples/real/
+examples/private/
+examples/internal/
+*.real.pdf
+*.private.pdf
+*.confidential.pdf
+*.lp.pdf
+examples/real_world/private_*
+examples/real_world/lp_*
+examples/real_world/confidential_*
+examples/real_world/internal_*

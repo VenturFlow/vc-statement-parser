@@ -1,0 +1,15 @@
+# Default reviewers for any change. Until we have a wider maintainer set,
+# the project's core team handles everything. Please tag in your PR.
+*                              @venturflow/maintainers
+
+# Security-sensitive files. Reviews on these REQUIRE a maintainer who is
+# also a member of the security team.
+SECURITY.md                    @venturflow/security
+.github/workflows/             @venturflow/security
+src/vc_statement_parser/extractors/llm.py  @venturflow/security
+
+# Schema-affecting changes — extra scrutiny because they break downstream
+# consumers.
+src/vc_statement_parser/models.py          @venturflow/maintainers
+src/vc_statement_parser/verification.py    @venturflow/maintainers
+docs/ILPA_ALIGNMENT.md                     @venturflow/maintainers
